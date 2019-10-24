@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container{
+        margin: 8% auto auto auto;
+        width: 100%;
+        text-align: center;
+    }
+    #mainText{
+        transition: color .5s;
+    }
+    #mainText:hover{
+        color: yellow;
+        /* border-style: none none solid none; */
+    }
+    #border{
+        color: seagreen;
+        transition: width .5s;
+        width: 0%;
+        border-top-style: solid;
+        margin: 0 auto 30px auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="mainText">
+            前端学院
+        </div>
+        <div id="border"></div>
+        <div>
+            <button id="btn" type="button" onclick="clickFunction()">变化样式</button>
+        </div>
+    </div>
+    <script>
+        var mainText = document.getElementById("mainText");
+        var border = document.getElementById("border");
+        var show = false;
+        console.log(border)
+        console.log(mainText)
+        function clickFunction(){
+            show = !show;
+            if (show) {
+                border.style.width = "10%";
+                mainText.style.color = "seagreen";
+            }else {
+                border.style.width = "0";
+                mainText.style.color = "";
+            }
+        }
+
+    </script>
+</body>
+</html>
